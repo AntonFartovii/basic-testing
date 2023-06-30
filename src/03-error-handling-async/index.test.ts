@@ -47,7 +47,7 @@ describe('throwCustomError', (): void => {
   });
 });
 
-describe('rejectCustomError', () => {
+describe('rejectCustomError', (): void => {
   test('should reject custom error', () => {
     return expect(rejectCustomError).rejects.toThrow(MyAwesomeError);
   });
