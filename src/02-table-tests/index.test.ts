@@ -50,3 +50,16 @@ describe.each(testCases2)('toBeLessThan', ({ a, b, action, expected }) => {
       expect(simpleCalculator({ a, b, action })).toBeLessThan(expected);
     });
 });
+
+const Multiply = [
+  { a: -1, b: 0, action: Action.Multiply, expected: 1 },
+  { a: 0, b: 32, action: Action.Multiply, expected: 1 },
+  { a: 3, b: 32, action: Action.Multiply, expected: 97 },
+];
+
+describe.each(Multiply)('multiply', ({ a, b, action, expected }) => {
+  expected &&
+    test('toBeLessThan', () => {
+      expect(simpleCalculator({ a, b, action })).toBeLessThan(expected);
+    });
+});
