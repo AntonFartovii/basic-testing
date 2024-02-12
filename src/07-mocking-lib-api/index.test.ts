@@ -1,7 +1,9 @@
 import axios from 'axios';
+// eslint-disable-next-line prettier/prettier
 import { throttledGetDataFromApi } from './index';
 
 jest.mock('axios', () => ({
+  // eslint-disable-next-line prettier/prettier
   get: jest.fn(),
   create() {
     return {
